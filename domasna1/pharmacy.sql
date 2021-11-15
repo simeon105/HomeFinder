@@ -7,8 +7,6 @@ CREATE TABLE Pharmacy (
     Municipality VARCHAR (255),
     City VARCHAR (255) DEFAULT 'Skopje',
     PostalCode INTEGER DEFAULT 1000,
-    Country VARCHAR (255) DEFAULT 'Macedonia',
-    Email VARCHAR (255),
-    Phone VARCHAR (255),
+    Country VARCHAR (255) DEFAULT 'Macedonia'
     PRIMARY KEY (ID)
 )
