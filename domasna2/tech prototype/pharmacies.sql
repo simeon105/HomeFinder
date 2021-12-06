@@ -1,4 +1,4 @@
-CREATE TABLE Pharmacy (
+CREATE TABLE yourlocalpharmacy.Pharmacies (
     ID INTEGER AUTO_INCREMENT NOT NULL,
     Name VARCHAR (255) NOT NULL,
     Lat VARCHAR (255) NOT NULL,
