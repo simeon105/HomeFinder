@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ВашаАптека</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand font-weight-bold" href="#">Ваша Аптека</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a  class="nav-link dropdown-toggle" href="#"><span class="glyphicon glyphicon-user"></span> Download CSV</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="col overflow-auto h-100 py-5" id="osm-map"></div>
+<script th:inline="javascript">
+    // Where you want to render the map.
+    var element = document.getElementById('osm-map');
+
+    // Height has to be set. You can do this in CSS too.
+    element.style = 'height:300px;';
+
+
+
+
+
+    const map = L.map(element).setView([41.99646, 21.43141], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        minZoom: 6,
+        maxZoom: 14,
+        attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    const marker1 = L.marker([41.991882, 21.4273351]).addTo(map);
+    marker1.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Св. Кирил и Методиј\nЗемја: Македонија");
+    });
+
+    const marker2 = L.marker([41.9995676, 21.4266118]).addTo(map);
+    marker2.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Булевар Климент Охридски\nЗемја: Македонија");
+    });
+
+    const marker3 = L.marker([41.9899658, 21.419838]).addTo(map);
+    marker3.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Виола\nЗемја: Македонија");
+    });
+
+    const marker4 = L.marker([41.9928765, 21.4341995]).addTo(map);
+    marker4.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин ( стара градска болница)\nЗемја: Македонија");
+    });
+
+    const marker5 = L.marker([41.9954508, 21.4273767]).addTo(map);
+    marker5.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин\nЗемја: Македонија");
+    });
+
+    const marker6 = L.marker([41.9916808, 21.4376415]).addTo(map);
+    marker6.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Life\nЗемја: Македонија");
+    });
+
+    const marker7 = L.marker([41.9964634, 21.4403185]).addTo(map);
+    marker7.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Аптека\nЗемја: Македонија");
+    });
+
+    const marker8 = L.marker([42.0004895, 21.4152598]).addTo(map);
+    marker8.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Betty\nЗемја: Македонија");
+    });
+
+    const marker9 = L.marker([41.9985752, 21.4154009]).addTo(map);
+    marker9.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Владимир Полежановски\nЗемја: Македонија");
+    });
+
+    const marker10 = L.marker([41.9910923, 21.4460324]).addTo(map);
+    marker10.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Zegin\nЗемја: Македонија");
+    });
+
+    const marker11 = L.marker([41.9890157, 21.436267]).addTo(map);
+    marker11.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: 11 Октомври\nЗемја: Македонија");
+    });
+
+    const marker12 = L.marker([41.9970967, 21.428404]).addTo(map);
+    marker12.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Булевар ВМРО\nЗемја: Македонија");
+    });
+
+    const marker13 = L.marker([41.9950329, 21.4250953]).addTo(map);
+    marker13.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Булевар Климент Охридски\nЗемја: Македонија");
+    });
+
+    const marker14 = L.marker([41.9952217, 21.423164]).addTo(map);
+    marker14.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Митрополит Теодосиј Гологанов\nЗемја: Македонија");
+    });
+
+    const marker15 = L.marker([41.998501, 21.4224854]).addTo(map);
+    marker15.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Zegin\nЗемја: Македонија");
+    });
+
+    const marker16 = L.marker([41.9938132, 21.426907]).addTo(map);
+    marker16.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Даме Груев\nЗемја: Македонија");
+    });
+
+    const marker17 = L.marker([41.9907383, 21.4259201]).addTo(map);
+    marker17.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Аптека\nЗемја: Македонија");
+    });
+
+    const marker18 = L.marker([41.9898127, 21.4196296]).addTo(map);
+    marker18.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Betty\nЗемја: Македонија");
+    });
+
+    const marker19 = L.marker([41.9958705, 21.4276434]).addTo(map);
+    marker19.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Виола\nЗемја: Македонија");
+    });
+
+    const marker20 = L.marker([41.9943079, 21.4311375]).addTo(map);
+    marker20.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Eуpoфapм\nЗемја: Македонија");
+    });
+
+    const marker21 = L.marker([41.9984708, 21.4226797]).addTo(map);
+    marker21.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин\nЗемја: Македонија");
+    });
+
+    const marker22 = L.marker([41.9988465, 21.4198668]).addTo(map);
+    marker22.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Владимир Полежановски\nЗемја: Македонија");
+    });
+
+    const marker23 = L.marker([41.9972254, 21.4373274]).addTo(map);
+    marker23.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин\nЗемја: Македонија");
+    });
+
+    const marker24 = L.marker([41.9932326, 21.4154083]).addTo(map);
+    marker24.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин\nЗемја: Македонија");
+    });
+
+    const marker25 = L.marker([41.9950445, 21.4332098]).addTo(map);
+    marker25.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Паркинг ГТЦ\nЗемја: Македонија");
+    });
+
+    const marker26 = L.marker([41.9919776, 21.4219509]).addTo(map);
+    marker26.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Уни Медикал\nЗемја: Македонија");
+    });
+
+    const marker27 = L.marker([42.0023086, 21.4626489]).addTo(map);
+    marker27.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин\nЗемја: Македонија");
+    });
+
+    const marker28 = L.marker([42.002633, 21.464621]).addTo(map);
+    marker28.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Јани Лукровски\nЗемја: Македонија");
+    });
+
+    const marker29 = L.marker([41.9811356, 21.4324038]).addTo(map);
+    marker29.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Аптека Виола\nЗемја: Македонија");
+    });
+
+    const marker30 = L.marker([41.9850045, 21.4377527]).addTo(map);
+    marker30.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин\nЗемја: Македонија");
+    });
+
+    const marker31 = L.marker([41.9762181, 21.438959]).addTo(map);
+    marker31.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Еурофарм\nЗемја: Македонија");
+    });
+
+    const marker32 = L.marker([41.9869002, 21.4308199]).addTo(map);
+    marker32.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин\nЗемја: Македонија");
+    });
+
+    const marker33 = L.marker([41.9771244, 21.4438185]).addTo(map);
+    marker33.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Еурофарм\nЗемја: Македонија");
+    });
+
+    const marker34 = L.marker([41.9835895, 21.4295599]).addTo(map);
+    marker34.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Apteka Biofit\nЗемја: Македонија");
+    });
+
+    const marker35 = L.marker([41.9874105, 21.4328978]).addTo(map);
+    marker35.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Антон Попов\nЗемја: Македонија");
+    });
+
+    const marker36 = L.marker([42.0037486, 21.4155218]).addTo(map);
+    marker36.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Франклин Рузвелт\nЗемја: Македонија");
+    });
+
+    const marker37 = L.marker([42.0034289, 21.3985661]).addTo(map);
+    marker37.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Херба\nЗемја: Македонија");
+    });
+
+    const marker38 = L.marker([41.9940569, 21.4008928]).addTo(map);
+    marker38.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Apteka Biofit\nЗемја: Македонија");
+    });
+
+    const marker39 = L.marker([41.9950587, 21.3943733]).addTo(map);
+    marker39.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Козле\nЗемја: Македонија");
+    });
+
+    const marker40 = L.marker([42.0032564, 21.3978776]).addTo(map);
+    marker40.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Zegin\nЗемја: Македонија");
+    });
+
+    const marker41 = L.marker([41.9960357, 21.4078311]).addTo(map);
+    marker41.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин\nЗемја: Македонија");
+    });
+
+    const marker42 = L.marker([42.0050186, 21.3834081]).addTo(map);
+    marker42.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Зегин (Карпош 4)\nЗемја: Македонија");
+    });
+
+    const marker43 = L.marker([42.0009171, 21.3902099]).addTo(map);
+    marker43.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: ЕуроФарм Тафталиџе\nЗемја: Македонија");
+    });
+
+    const marker44 = L.marker([42.0032478, 21.4078707]).addTo(map);
+    marker44.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Betty\nЗемја: Македонија");
+    });
+
+    const marker45 = L.marker([42.0026568, 21.4053418]).addTo(map);
+    marker45.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Аптека Ремедиум Лек\nЗемја: Македонија");
+    });
+
+    const marker46 = L.marker([41.9969243, 21.408508]).addTo(map);
+    marker46.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Опоум\nЗемја: Македонија");
+    });
+
+    const marker47 = L.marker([42.0028618, 21.4010137]).addTo(map);
+    marker47.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Eurofarm\nЗемја: Македонија");
+    });
+
+    const marker48 = L.marker([42.0161642, 21.4403511]).addTo(map);
+    marker48.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Еурофарм\nЗемја: Македонија");
+    });
+
+    const marker49 = L.marker([41.9823463, 21.4738911]).addTo(map);
+    marker49.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Булевар Видое Смилевски Бато\nЗемја: Македонија");
+    });
+
+    const marker50 = L.marker([42.0128994, 21.4356244]).addTo(map);
+    marker50.on('click', function(leafletEvent) {
+        alert("Аптека\nИме: Vita Farm\nЗемја: Македонија");
+    });
+
+
+    leafletMarkers.addTo(map);
+</script>
+
+
+</body>
+</html>

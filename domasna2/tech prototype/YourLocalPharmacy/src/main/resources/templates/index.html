@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ВашаАптека</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand font-weight-bold" href="#">Ваша Аптека</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a  class="nav-link dropdown-toggle" href="#"><span class="glyphicon glyphicon-user"></span> Download CSV</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+<div id="osm-map"></div>
+<script>
+    // Where you want to render the map.
+    var element = document.getElementById('osm-map');
+
+    // Height has to be set. You can do this in CSS too.
+    element.style = 'height:300px;';
+
+    // Create Leaflet map on map element.
+    var map = L.map(element);
+
+    // Add OSM tile layer to the Leaflet map.
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Target's GPS coordinates.
+    var target = L.latLng('47.50737', '19.04611');
+
+    // Set map's center to target with zoom 14.
+    map.setView(target, 14);
+
+    // Place a marker on the same location.
+    L.marker(target).addTo(map);
+</script>
+
+
+</body>
+</html>
