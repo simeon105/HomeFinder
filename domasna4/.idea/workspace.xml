@@ -4,25 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb0af2ef-9909-4084-9517-c5379f59d1d1" name="Changes" comment="">
+    <list default="true" id="cb0af2ef-9909-4084-9517-c5379f59d1d1" name="Changes" comment="eureka-server">
+      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/config/JobScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/model/Pharmacy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/model/exceptions/InvalidCategoryIdException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/repository/PharmacyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/service/PharmacyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/service/impl/PharmacyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pharmacy/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pharmacy/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pharmacy/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pharmacy/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pharmacy/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pharmacy/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pharmacy/src/main/java/com/example/pharmacy/PharmacyApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pharmacy/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pharmacy/src/test/java/com/example/pharmacy/PharmacyApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,6 +56,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -52,8 +75,8 @@
   </component>
   <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -61,10 +84,24 @@
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.eurekaserver.EurekaServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PharmaciesServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pharmacies-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.pharmaciesservice.PharmaciesServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.PharmaciesServiceApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -74,8 +111,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643634762364</updated>
-      <workItem from="1643634778904" duration="7345000" />
+      <workItem from="1643634778904" duration="13068000" />
     </task>
+    <task id="LOCAL-00001" summary="eureka-server">
+      <created>1643647378439</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643647378439</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,5 +136,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="eureka-server" />
+    <option name="LAST_COMMIT_MESSAGE" value="eureka-server" />
   </component>
 </project>
