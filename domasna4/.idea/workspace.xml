@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb0af2ef-9909-4084-9517-c5379f59d1d1" name="Changes" comment="eureka-server">
-      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/config/JobScheduler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/model/Pharmacy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/model/exceptions/InvalidCategoryIdException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/repository/PharmacyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/service/PharmacyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/service/impl/PharmacyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/main/java/com/example/frontendservice/model/Pharmacy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/main/java/com/example/frontendservice/model/exceptions/InvalidPharmacyIdException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/main/java/com/example/frontendservice/repository/PharmacyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/main/java/com/example/frontendservice/service/PharmacyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/main/java/com/example/frontendservice/service/impl/PharmacyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/main/java/com/example/frontendservice/web/PharmaciesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pharmacy-service/src/main/java/com/example/pharmacyservice/config/JobScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pharmacy-service/src/main/java/com/example/pharmacyservice/model/Pharmacy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pharmacy-service/src/main/java/com/example/pharmacyservice/repository/PharmacyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/config/JobScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/model/Pharmacy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/model/exceptions/InvalidCategoryIdException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/repository/PharmacyRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/service/PharmacyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pharmacies-service/src/main/java/com/example/pharmaciesservice/service/impl/PharmacyServiceImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +60,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="24SrI8GSQUO236NY58zsrCnQQpI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -65,7 +83,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../kk/frontend-service" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -73,7 +96,7 @@
       <recent name="C:\Users\SIME\Desktop\yourLocalPharmacy\domasna4" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
+  <component name="RunManager" selected="Spring Boot.FrontendServiceApplication">
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -89,6 +112,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FrontendServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="frontend-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.frontendservice.FrontendServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PharmaciesServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pharmacies-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.pharmaciesservice.PharmaciesServiceApplication" />
@@ -97,10 +127,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PharmacyServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pharmacy-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.pharmacyservice.PharmacyServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.PharmaciesServiceApplication" />
+      <item itemvalue="Spring Boot.PharmacyServiceApplication" />
+      <item itemvalue="Spring Boot.FrontendServiceApplication" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -111,7 +150,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643634762364</updated>
-      <workItem from="1643634778904" duration="13068000" />
+      <workItem from="1643634778904" duration="14679000" />
+      <workItem from="1643663941542" duration="65000" />
+      <workItem from="1643678200397" duration="6296000" />
+      <workItem from="1643689606821" duration="4662000" />
     </task>
     <task id="LOCAL-00001" summary="eureka-server">
       <created>1643647378439</created>
@@ -120,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643647378439</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="eureka-server">
+      <created>1643654178909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643654178909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/domasna4.iml" filepath="$PROJECT_DIR$/.idea/domasna4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontend-service/frontend-service.iml" filepath="$PROJECT_DIR$/frontend-service/frontend-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pharmacies-service/pharmacies-service.iml" filepath="$PROJECT_DIR$/pharmacies-service/pharmacies-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pharmacy-service/pharmacy-service.iml" filepath="$PROJECT_DIR$/pharmacy-service/pharmacy-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yourLocalPharmacy.iml" filepath="$PROJECT_DIR$/yourLocalPharmacy.iml" />
+    </modules>
+  </component>
+</project>

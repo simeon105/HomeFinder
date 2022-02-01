@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ВашаАптека</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand font-weight-bold" href="#">Ваша Аптека</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a  class="nav-link dropdown-toggle" href="#"><span class="glyphicon glyphicon-user"></span> Download CSV</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="col overflow-auto h-100 py-5" id="osm-map"></div>
+<script th:inline="javascript">
+    // Where you want to render the map.
+    var element = document.getElementById('osm-map');
+
+    // Height has to be set. You can do this in CSS too.
+    element.style = 'height:300px;';
+
+    const map = L.map(element).setView([41.99646, 21.43141], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        minZoom: 6,
+        maxZoom: 14,
+        attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    const modelAtt = [[${pharmacies}]];
+
+    for (let i=0;i<50;i++) {
+        const markerEle = L.marker([parseFloat(modelAtt[i]["lat"]), parseFloat(modelAtt[i]["lon"])]).addTo(map);
+        markerEle.on("click", function (leafletEvent) {
+            alert("Аптека\nИме: " + modelAtt[i]["name"] + "\nГрад: " + modelAtt[i]["city"] + "\nЗемја: " +  modelAtt[i]["country"]);
+        });
+    }
+
+    leafletMarkers.addTo(map);
+</script>
+
+
+</body>
+</html>
